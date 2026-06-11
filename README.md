@@ -1,8 +1,8 @@
 # P-NDQN: Prioritized Noisy Dueling DQN for Multi-Objective HTAP Index Selection
 
-This repository contains the code, workloads, and pre-computed results for the ICDE 2027 paper:
+This repository contains the code, workloads, and pre-computed results for a submitted paper in the ICDE 2027:
 
-> **P-NDQN: Multi-Objective Index Selection for HTAP Workloads via Prioritized Noisy Dueling Deep Q-Network**
+> **Multi-Objective Reinforcement Learning for Index Selection in Hybrid Transactional/Analytical Workloads**
 
 P-NDQN is a reinforcement learning agent that selects database indexes for Hybrid Transactional/Analytical Processing (HTAP) workloads by jointly optimizing three objectives: query latency, write overhead, and memory efficiency.
 
