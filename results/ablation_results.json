@@ -1,0 +1,62 @@
+{
+  "description": "Ablation study results reproducing Table 3 of the paper. Models trained at 100 MB memory budget (seed 42) using chbench_htap_balanced.sql, evaluated at 100 MB on chbench_htap_test.sql over 15 episodes. The 'Memory penalty' variant is excluded from Table 3 (its effect overlaps with action masking) but is kept here for completeness.",
+  "configs": [
+    {
+      "name": "P-NDQN (full)",
+      "model_dir": "results/models/morl_seed42/",
+      "avg_reward": 3.39,
+      "delta_vs_full": null,
+      "avg_indexes": 12.7
+    },
+    {
+      "name": "- Write penalty",
+      "model_dir": "results/ablation/no_write_seed42/",
+      "avg_reward": -5.62,
+      "delta_vs_full": -9.02,
+      "avg_indexes": 13.1
+    },
+    {
+      "name": "- Phase adaptation",
+      "model_dir": "results/ablation/no_phase_seed42/",
+      "avg_reward": 1.95,
+      "delta_vs_full": -1.44,
+      "avg_indexes": 12.3
+    },
+    {
+      "name": "- PER (uniform replay)",
+      "model_dir": "results/ablation/no_per_seed42/",
+      "avg_reward": -4.58,
+      "delta_vs_full": -7.97,
+      "avg_indexes": 11.8
+    },
+    {
+      "name": "- NoisyNet (eps-greedy)",
+      "model_dir": "results/ablation/no_noisy_seed42/",
+      "avg_reward": -10.93,
+      "delta_vs_full": -14.32,
+      "avg_indexes": 10.2
+    },
+    {
+      "name": "- Dueling (standard head)",
+      "model_dir": "results/ablation/no_dueling_seed42/",
+      "avg_reward": -9.91,
+      "delta_vs_full": -13.30,
+      "avg_indexes": 10.9
+    },
+    {
+      "name": "- Action masking",
+      "model_dir": "results/ablation/no_mask_seed42/",
+      "avg_reward": 2.90,
+      "delta_vs_full": -0.49,
+      "avg_indexes": 14.1
+    }
+  ],
+  "full_reward": 3.39,
+  "drlinda_reward": -41.39,
+  "seed": 42,
+  "n_episodes": 15,
+  "memory_budget_mb": 100.0,
+  "training_budget_mb": 100.0,
+  "workload": "data/workloads/chbench_htap_test.sql",
+  "note": "MO Reward values match paper Table 3. To regenerate, run: python evaluate_ablation.py"
+}

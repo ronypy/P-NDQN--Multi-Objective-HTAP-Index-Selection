@@ -1,0 +1,29 @@
+# Database credentials — NEVER commit real credentials
+data/db_credentials_pg.json
+
+# Model checkpoints (host on Zenodo; see download_models.sh)
+*.pt
+*.pth
+results/models/
+results/ablation/
+
+# Training logs and output directories
+output/
+*.log
+
+# Generated figures and tables (regenerate with scripts)
+figures/
+plots/
+*.png
+*.pdf
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Editor and OS artifacts
+.DS_Store
+*.swp
+*~
