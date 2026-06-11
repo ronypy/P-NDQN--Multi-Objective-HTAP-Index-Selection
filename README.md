@@ -17,28 +17,28 @@ P-NDQN is a reinforcement learning agent that selects database indexes for Hybri
 ├── pg_database.py               # PostgreSQL + HypoPG interface
 │
 ├── baselines/                   # Re-implementations of comparison methods
-│   ├── random_baseline.py       # Random index selection
-│   ├── drlinda_baseline.py      # DRLinda (DQN, latency-only)
-│   ├── swirl_baseline.py        # SWIRL (PPO, latency-only)
-│   ├── smartix_baseline.py      # SmartIX (DQN, inverse-cost)
-│   ├── anytime_baseline.py      # Anytime greedy enumeration
-│   └── dba_bandits_baseline.py  # DBA Bandits (C3UCB; supplementary)
+│   ├── random_baseline.py       
+│   ├── drlinda_baseline.py      
+│   ├── swirl_baseline.py         
+│   ├── smartix_baseline.py      
+│   ├── anytime_baseline.py      
+│   └── dba_bandits_baseline.py  
 │
 ├── run_experiments.py           # Train all methods across seeds
-├── comprehensive_evaluation.py  # Produce Table 2 results
-├── run_ablation.sh              # Train 7 ablation variants
-├── evaluate_ablation.py         # Produce Table 3 results
+├── comprehensive_evaluation.py  
+├── run_ablation.sh              
+├── evaluate_ablation.py         
 │
 ├── data/
-│   ├── db_credentials_template.json  # Copy to db_credentials_pg.json and fill in
+│   ├── db_credentials_template.json  
 │   └── workloads/
-│       ├── chbench_htap_train.sql    # Training workload (123 queries)
-│       ├── chbench_htap_test.sql     # Test workload (45 queries)
-│       └── chbench_htap_balanced.sql # Ablation training workload
+│       ├── chbench_htap_train.sql    
+│       ├── chbench_htap_test.sql     
+│       └── chbench_htap_balanced.sql 
 │
 ├── results/
-│   ├── comprehensive_evaluation.json  # Pre-computed Table 2 values
-│   └── ablation_results.json          # Pre-computed Table 3 values
+│   ├── comprehensive_evaluation.json  
+│   └── ablation_results.json          
 │
 ├── download_models.sh           # Fetch pre-trained checkpoints from Zenodo
 └── requirements.txt
