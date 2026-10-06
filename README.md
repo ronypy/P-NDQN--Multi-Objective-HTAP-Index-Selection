@@ -1,6 +1,6 @@
 # P-NDQN: Prioritized Noisy Dueling DQN for Multi-Objective HTAP Index Selection
 
-This repository contains the code, workloads, and pre-computed results for a submitted paper in the ICDE 2027:
+This repository contains the code, workloads, and pre-computed results for P-NDQN index optimizer project:
 
 > **Multi-Objective Reinforcement Learning for Index Selection in Hybrid Transactional/Analytical Workloads**
 
@@ -142,7 +142,5 @@ All baselines in `baselines/` are **our re-implementations** of the methods desc
 ## Hardware
 
 All experiments were run on: Intel Xeon E5-2680 v4 (28 cores), 64 GB RAM, Ubuntu 22.04, PostgreSQL 14.9, HypoPG 1.4.0.
-
-Training times: ~13 hours per seed (single seed, no parallelism). Inference: ~1.5 ms per index decision.
 
 ---
